@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="dodaj książke"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:layout_marginBottom="16dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etTytul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="podaj tytul" />
+
+    <EditText
+        android:id="@+id/etAutor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="podaj autora" />
+
+    <EditText
+        android:id="@+id/etCena"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="podaj cene"
+        android:inputType="numberDecimal" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/swPromocja"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Czy promocja" />
+
+    <LinearLayout
+        android:id="@+id/llPromocja"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <SeekBar
+            android:id="@+id/sbPromocja"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="80" />
+
+        <TextView
+            android:id="@+id/tvWartoscPromocji"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="10%"
+            android:textAlignment="center" />
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/rgTyp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="8dp">
+
+        <RadioButton
+            android:id="@+id/rbPapierowa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="papierowa"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/rbAudio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="audio" />
+
+        <RadioButton
+            android:id="@+id/rbPdf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="pdf" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnDodaj"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="dodaj"
+        android:layout_marginTop="16dp" />
+
+    <ListView
+        android:id="@+id/lvKsiazki"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>
